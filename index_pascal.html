@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Une mise en oeuvre de L'agilité à la RATP</title>
+
+    <meta name="description" content="L'agilité pour concevoir le logiciel de planification des travaux de nuit du RER A & B">
+    <meta name="author" content="Eric Lucas">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section>
+            <h1>L'agilité</h1>
+            <h3>mon retour d'experience</h3>
+            <p>
+                <small>Created by <a href="#">Eric Lucas</a> / <a href="http://twitter.com/zaxxon321">@zaxxon321</a>
+                </small>
+            </p>
+        </section>
+        <section>
+            <P>Otelo : La planification des travaux de nuit du RER</P>
+            <a href="#" class="navigate-down">
+                <!-- width="178" height="238" -->
+                <img  data-src="image/otelo01.png"
+                      alt="Down arrow">
+            </a>
+        </section>
+        <section>
+            <p>Otelo : La planification des travaux de nuit du RER</p>
+            <a href="#" class="navigate-down">
+                <!-- width="178" height="238" -->
+                <img  data-src="image/otelo02.png"
+                     alt="Down arrow">
+            </a>
+        </section>
+        <section>
+            <h3>Le contexte projet</h3>
+            <p>
+                Plus l'offre de service en journée est longue, plus la nuit pour l'entretien du matériel est courte.
+                Besoin de planifier aux mieux les chantiers.
+            </p>
+            <a href="#" class="navigate-down">
+                <img width="800"  data-src="image/otelo03.png"
+                     alt="Down arrow">
+            </a>
+            <aside class="notes">
+                Accident en gare Brétigny du 12/07/2013, 7 morts (défaillance d'une éclisse, pièce métallique servant à raccorder deux rails consécutifs)
+            </aside>
+        </section>
+        <section>
+            <h3>Les acteurs du projet</h3>
+            <ul>
+                <li><strong>Les utilisateurs</strong> = expert du métier/utilisateurs finaux</li>
+                <li><strong>MOA [Product Owner]</strong> = représentant des utilisateurs</li>
+                <li><strong>MOE [Scrum Master] / Dev </strong> = le chef de projet
+                    <a href="#" class="csscenter navigate-down">
+                        <img  data-src="image/fallout_role_scrumaster.gif"
+                              alt="Down arrow">
+                    </a>
+                </li>
+                <li><strong>MOE Dev</strong> = l'équipe de developpeurs</li>
+            </ul>
+
+        </section>
+        <section>
+            <h3>Cycle en V ou Agilité ?</h3>
+            <a href="#" class="navigate-down">
+                <img width="265"  data-src="image/cycle_en_V_265x300.jpg"
+                     alt="Down arrow">
+            </a>
+            <a href="#" class="navigate-down">
+                <img width="400"  data-src="image/agilist.jpg"
+                     alt="Down arrow">
+            </a>
+        </section>
+        <section>
+            <h3>Cycle en V : Non</h3>
+            <a href="#" class="navigate-down">
+                <img width="800"  data-src="image/cycle_en_V.jpg"
+                     alt="Down arrow">
+            </a>
+            <p>Pas adapté à un besoin evolutif et pas toujours bien cadré.</p>
+            <aside class="notes">
+                Cycle en V = client à son mot à dire qu'en debut et fin de projet (Effet tunnel).<br>
+                Beaucoup d'echecs sur les projets RATP ses dernières années (nos MOA ne savent pas spécifier un besoin très souvent evolutifs).<br>
+                A minima, la ratp essaye aujourd'hui de faire au moins du Cycle en W.
+            </aside>
+        </section>
+        <section>
+            <h3>Agilité, oui mais c'est quoi ?</h3>
+            <p><a href="http://agilemanifesto.org/iso/fr/">agilemanifesto.org</a></p>
+            <a href="#" class="navigate-down">
+                <img data-src="image/manifest_agile.jpg"
+                     alt="Down arrow">
+            </a>
+        </section>
+        <section>
+            <h3>Agilité, les critères de réussite</h3>
+            <p>l'Engagement MOA</p>
+            <ol>
+                <li>Réactivité/disponibilité forte</li>
+                <li>Prise en charge de la conduite du changement (formation, documentation)</li>
+                <li>Confronter au plus vite un prototype à une population réelle d'utilisateur => feedback</li>
+                <li>Respect des délais au détriment du périmètre</li>
+            </ol>
+
+            <a href="#" class="navigate-down">
+                <img width="100" data-src="image/agile_manager.jpg"
+                     alt="Down arrow">
+            </a>
+            <aside class="notes">
+                L'agilité concerne les type de projet devant tenir compte de besoin changeant (à mon avis tous).<br>
+                Les gros projets aussi peuvent être mené en agile (Scrum de Scrum)<br>
+                Savoir faire le sacrifice de fonctionnalités peu utilisées : mode dégradé. zoomon sur ce point.
+            </aside>
+        </section>
+        <section>
+            <h3>Agile - Respect des délais au détriment du périmètre ?</h3>
+            <ol>
+                <li><strong><s>Coût</s></strong> (augmenter l'effectif) </li>
+                <li><strong><s>Qualitè</s></strong> (on code plus vite mais plus mal)</li>
+                <li><strong><s>Délai</s></strong> (on retarde la mise en prod)</li>
+                <li><strong>Périmètre, on reduit ce qu'il y a à faire</strong></li>
+            </ol>
+            <a href="#" class="navigate-down">
+                <img  data-src="image/agile_triangle.jpg"
+                     alt="Down arrow">
+            </a>
+            <aside class="notes">
+                Valeur de l'agilité : C'est le perimetre que l'on fait bouger, pas la date de mise en service ni la qualité (dette technique).
+            </aside>
+        </section>
+        <section>
+            <h3>Agilité, comment on fait ?</h3>
+            <p><small>plusieurs méthode, on a choisi <a href="https://fr.wikipedia.org/wiki/Scrum_%28m%C3%A9thode%29">Scrum</a>(mais on peut s'inspirer aussi de Kanban, Xp, etc..)</small></p>
+            <a href="#" class="navigate-down">
+                <img data-src="image/cycle_scrum.jpg"
+                     alt="Down arrow">
+            </a>
+        </section>
+        <section>
+            <h3>Scrum, terminologie Anglophone</h3>
+            <a href="#" class="navigate-down">
+                <img data-src="image/agile_scrum_terminologie_us.jpg"
+                     alt="Down arrow">
+            </a>
+            <aside class="notes">
+                Perimètre produit, perimètre itération, Réunion de planification, Itération, Réunion quotidienne, Démonstration/Revue d'itération, Rétrospective.
+            </aside>
+        </section>
+        <section>
+            <h3>Scrum, les valeurs</h3>
+            <ol>
+                <li>On améliore constament le travail de l'équipe: <strong>la réunion quotidienne</strong>, et <strong>la rétrospective de fin de sprint</strong></li>
+                <li>On améliore le produit: <strong>la démo</strong>, et <strong>la revue d'itération</strong></li>
+                <li>On code propre (dette technique)</li>
+                <li>On travaille à un rythme non soutenu</li>
+            </ol>
+            </p>
+            <tr>
+                <td>
+                    <a href="#" class="navigate-down">
+                        <img width="450" data-src="image/cycle_scrum_amelioration.jpg"
+                             alt="Down arrow">
+                    </a>
+                </td>
+                <td>
+                    <a href="#" class="navigate-down">
+                        <img width="430" data-src="image/jemalotif_screum_barre.png"
+                             alt="Down arrow">
+                    </a>
+                </td>
+            </tr>
+        </section>
+        <!-- backlog produit -->
+        <section data-background="image/cycle_scrum_backlog.jpg" data-background-size="330px" data-state="img-right">
+            <p>Histoires utilisateurs & Estimation de la dificultés</p>
+            <p>Redmine+plugin Redmine Backlog (ou Jira, Icescrum)</p>
+                 <a href="#" class="navigate-down">
+                     <img data-src="image/redmine_backlog.png"
+                          alt="Down arrow">
+                 </a>
+        </section>
+        <!-- backlog produit -->
+        <section data-background="image/cycle_scrum_backlog.jpg" data-background-size="330px" data-state="img-right">
+            <h3>Estimation de la dificultés</h3>
+            <p>Planning poker : TP Taille des races de chien</p>
+            <a href="#" class="navigate-down">
+                <img data-src="image/chiens.png"
+                     alt="Down arrow">
+            </a>
+        </section>
+        <section data-background="image/cycle_scrum_backlog_sprint.jpg" data-background-size="330px" data-state="img-right" data-transition="None">
+            <a href="#" class="navigate-down">
+                <img data-src="image/redmine_old_sprint.png"
+                     alt="Down arrow">
+            </a>
+        </section>
+        <section data-background="image/cycle_scrum_backlog_sprint.jpg" data-background-size="330px" data-state="img-right" data-transition="None">
+            <a href="#" class="navigate-down">
+                <img data-src="image/redmine_backlog_sprint.png"
+                     alt="Down arrow">
+            </a>
+        </section>
+        <section data-background="image/cycle_scrum_backlog_sprint.jpg" data-background-size="330px" data-state="img-right" data-transition="None">
+            <a href="#" class="navigate-down">
+                <img data-src="image/redmine_backlog_sprint_resp.png"
+                     alt="Down arrow">
+            </a>
+        </section>
+        <section data-background="image/cycle_scrum_developpement.jpg" data-background-size="330px" data-state="img-right" data-transition="None">
+            <h3>Itérations / dev</h3>
+            <p>L'equipe MOE - Compétences & Outils</p>
+            <ol>
+                <li>Reunion quotidienne / Debout 10mn (Daily meeting).</li>
+                <li>Curiosité & organisation de sa veille technique.</li>
+                <li>Connaissance du stack du projet :<br><small>HTML-CSS/Angular.js/REST/Java8/Play/PostgreSQL.</small></li>
+                <li>Qualité du code, Refactorer, eviter la dette technique :
+                <i>
+                    <small>
+                    <br>  - les tests unitaires, d'integrations, voir fonctionnels (TDD).
+                    <br>  - les bonnes pratiques (DRY Don’t Repeat Yourself, test, desing Pattern),
+                    <br>  - les outils IntelliJ/Ckeckstyle/Git/Sonar/artifactory.
+                    </small>
+                </i>
+            </ol>
+            <aside class="notes">
+                Daily meeting = Qu'est ce que je fais / ce que je vais faire / les probèmes que je rencontre<br>
+                HTML-CSS/JS:REACT/REST/PHP/Symfony/Play/PostgreSQL.<br>
+                DRY=Ne vous répétez pas, KISS =Keep it Simple, Stupid (ne compliquer pas les choses, rester simple), SOLID, etc...<br>
+                Design pattern (singleton, Injection de dépendance, Factory, etc...).
+            </aside>
+        </section>
+        <section data-background="image/cycle_scrum_revue.jpg" data-background-size="330px" data-state="img-right" data-transition="None">
+            <h3>Revue de fin de l'itération</h3>
+            <p>La version en cours</p>
+            <ol>
+                <li>Tagger (git) / Livrer (jenkins) en environnement de recette,</li>
+                <li>Faire une <strong>DEMO</strong> à la MOA+representants utilisateurs et recueil des remarques,</li>
+                <li>Mise à jour du backlog du produit (redmine)</li>
+                <li>Retrospective (ameliorer l'itération suivante)</li>
+            </ol>
+            <a href="#" class="navigate-down">
+                <img width="200" data-src="image/git_flow.png" alt="Down arrow">
+            </a>
+            <a href="#" class="navigate-down">
+                <img width="250" data-src="image/jenkins.png" alt="Down arrow">
+            </a>
+            <a href="#" class="navigate-down">
+                <img width="250" data-src="image/redmine_backlog.png" alt="Down arrow">
+            </a>
+            <aside class="notes">
+                Démo étendue à certain utilisateur référant,<br>
+                Permet au client d'avoir une vue concréte de l'outils, remettre en cause son besoin et demander à le corriger,<br>
+                C'est par ce biais que toutes les 2 semaines, on prends en compte le changement (client ou contextuel).<br>
+                Retrospective : ce qui a bien fonctionner et ce qu'on peut améliorer.
+            </aside>
+        </section>
+        <section>
+            <p>On réitère N fois (fixer en début de projet)</p>
+            <a href="#" class="navigate-down">
+                <img data-src="image/cycle_scrum_itere.jpg" alt="Down arrow">
+            </a>
+        </section>
+        <section data-transition="None">
+            <h3>Process de développement</h3>
+            <a href="#" class="navigate-down">
+                <img data-src="image/usine_dev.png" alt="Down arrow">
+            </a>
+        </section>
+        <section data-transition="None">
+            <h3>Process de développement & outils</h3>
+            <a href="#" class="navigate-down">
+                <img data-src="image/usine_dev_outils.png" alt="Down arrow">
+            </a>
+        </section>
+        <section>
+            <p>Ma veille - termes à googleliser</p>
+            <ul>
+                <li>manifest agile,</li>
+                <li>Redmine + plugin Agile <small>(mais cela peut être du Jira, IceScrum)</small></li>
+                <li>Usine Logiciel (hutson/sonar/maven/artifactory)</li>
+                <li>microservice <small><a hreflang="fr" href="https://www.parleys.com/tutorial/i-dont-always-write-reactive-applications-when-i-do-runs-raspberry-pi-1">https://www.parleys.com/tutorial/i-dont-always-write-reactive-applications-when-i-do-runs-raspberry-pi-1</a></small></li>
+                <li>noSql (Cassandra, Neo4J, Redis, etc)</li>
+                <li>CQRS<small><a hreflang="fr" href="http://blog.octo.com/cqrs-larchitecture-aux-deux-visages-partie-1/">http://blog.octo.com/cqrs-larchitecture-aux-deux-visages-partie-1/</a></small></li>
+                <li>Domain Driven Design<small><a hreflang="fr" href="http://blog.octo.com/domain-driven-design-des-armes-pour-affronter-la-complexite/">http://blog.octo.com/domain-driven-design-des-armes-pour-affronter-la-complexite/</a></small></li>
+                <li>Java 8 Programmation fonctionnelle (stream), Scala, Play Framework</li>
+                <li>Conférences préférées : Parisweb,  Devoxx</li>
+            </ul>
+        </section>
+
+        <section style="text-align: left;">
+            <h1>THE END</h1>
+            <p>
+                <a href="http://slides.com">Cette presentation est disponible sur http://github/XXXXXX</a> <br>
+            </p>
+            <h3>Crédits</h3>
+            <ul>
+                <li><em>Logiciels</em> :
+                    <a hreflang="en" href="http://lab.hakim.se/reveal-js/">reveal.js</a>,
+                    <a hreflang="en" href="http://www.redmine.org/">redmine</a>,
+                    <a hreflang="en" href="http://www.redminebacklogs.net/">plugin Redmine Backlog</a>,
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+            {
+                src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            },
+            {
+                src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            },
+            {src: 'plugin/zoom-js/zoom.js', async: true},
+            {src: 'plugin/notes/notes.js', async: true}
+        ]
+    });
+
+</script>
+
+</body>
+</html>
